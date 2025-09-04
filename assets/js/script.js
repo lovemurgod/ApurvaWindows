@@ -154,14 +154,21 @@ function initScrollAnimations() {
 
 // Counter animation for stats
 function animateCounter(element) {
-    const target = parseInt(element.innerText);
+    const originalText = element.innerText;
+    
+    // Don't animate if text contains +, %, or is non-numeric
+    if (originalText.includes('+') || originalText.includes('%') || isNaN(parseInt(originalText))) {
+        return; // Keep original text
+    }
+    
+    const target = parseInt(originalText);
     const increment = target / 50;
     let current = 0;
     
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
-            element.innerText = element.innerText; // Keep original format (700+, etc.)
+            element.innerText = originalText; // Keep original format
             clearInterval(timer);
         } else {
             element.innerText = Math.floor(current);
@@ -509,3 +516,43 @@ function initLazyLoadVideos() {
 
 // Initialize lazy loading
 initLazyLoadVideos();
+
+// Image gallery functions for Invisible Grills
+function changeGrillImage(clickedThumbnail, newImageSrc) {
+    // Update main image
+    const mainImage = document.getElementById('grill-main-image');
+    if (mainImage) {
+        mainImage.style.opacity = '0.7';
+        setTimeout(() => {
+            mainImage.src = newImageSrc;
+            mainImage.style.opacity = '1';
+        }, 150);
+    }
+    
+    // Update active thumbnail
+    const grillThumbnails = document.querySelectorAll('.product-showcase:nth-of-type(3) .thumbnail');
+    grillThumbnails.forEach(thumb => {
+        thumb.classList.remove('active');
+    });
+    clickedThumbnail.classList.add('active');
+}
+
+// Image gallery functions for Bird Nets
+function changeBirdnetImage(clickedThumbnail, newImageSrc) {
+    // Update main image
+    const mainImage = document.getElementById('birdnet-main-image');
+    if (mainImage) {
+        mainImage.style.opacity = '0.7';
+        setTimeout(() => {
+            mainImage.src = newImageSrc;
+            mainImage.style.opacity = '1';
+        }, 150);
+    }
+    
+    // Update active thumbnail
+    const birdnetThumbnails = document.querySelectorAll('.product-showcase:nth-of-type(4) .thumbnail');
+    birdnetThumbnails.forEach(thumb => {
+        thumb.classList.remove('active');
+    });
+    clickedThumbnail.classList.add('active');
+}
