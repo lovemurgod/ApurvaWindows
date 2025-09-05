@@ -789,8 +789,9 @@ body {
 .customer-reviews-section {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 4rem 2rem 0 2rem;
-    /* ↑ Add top padding to prevent content from being cut off */
+    padding: 0 2rem;
+    padding-top: 2rem;
+    /* Add extra top margin to the reviews-slider to prevent stars from being cut off */
 }
 
 .reviews-title {
@@ -809,6 +810,7 @@ body {
     padding: 3rem;
     border: 2px solid rgba(212, 175, 55, 0.2);
     box-shadow: 0 10px 40px rgba(0, 22, 53, 0.4);
+    margin-top: 2rem;
 }
 
 .reviews-wrapper {
