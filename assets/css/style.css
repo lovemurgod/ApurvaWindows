@@ -872,7 +872,7 @@ body {
     font-size: 1.2rem;
     font-weight: 600;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem; /* was 0.5rem, reduced by 20% */
 }
 
 .author-location {
