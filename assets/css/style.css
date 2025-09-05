@@ -789,7 +789,8 @@ body {
 .customer-reviews-section {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 4rem 2rem 0 2rem;
+    /* ↑ Add top padding to prevent content from being cut off */
 }
 
 .reviews-title {
