@@ -817,7 +817,7 @@ body {
 
 .reviews-wrapper {
     position: relative;
-    height: 300px;
+    height: 360px; /* was 300px, increased by 20% */
     overflow: hidden;
 }
 
