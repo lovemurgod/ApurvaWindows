@@ -790,8 +790,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 2rem;
-    padding-top: 2rem;
-    /* Add extra top margin to the reviews-slider to prevent stars from being cut off */
+    /* Remove padding-top and margin-top here */
 }
 
 .reviews-title {
@@ -801,6 +800,8 @@ body {
     text-align: center;
     margin-bottom: 3rem;
     font-family: var(--font-primary);
+    margin-top: 2.5rem;
+    /* Add margin-top to push the title and stars down */
 }
 
 .reviews-slider {
@@ -810,7 +811,8 @@ body {
     padding: 3rem;
     border: 2px solid rgba(212, 175, 55, 0.2);
     box-shadow: 0 10px 40px rgba(0, 22, 53, 0.4);
-    margin-top: 2rem;
+    margin-top: 0;
+    /* Remove margin-top here */
 }
 
 .reviews-wrapper {
