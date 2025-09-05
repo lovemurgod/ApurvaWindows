@@ -198,6 +198,7 @@ body {
     align-items: center;
     background: var(--primary-navy);
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .hero-background {
