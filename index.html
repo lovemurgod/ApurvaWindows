@@ -503,7 +503,14 @@
     </footer>
 
     </div>
-
+    <script>
+        // Fix 100vh issue on mobile browsers
+        function setVh() {
+            document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+        }
+        setVh();
+        window.addEventListener('resize', setVh);
+    </script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
