@@ -193,9 +193,13 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100dvh;
-    /* fallback for browsers that don't support dvh/svh/lvh */
-    min-height: calc(var(--vh, 1vh) * 100);
+    min-height: 100dvh !important;
+    min-height: 100svh !important;
+    min-height: 100lvh !important;
+    min-height: 100vh !important;
+    min-height: calc(var(--vh, 1vh) * 100) !important;
+    width: 100vw;
+    box-sizing: border-box;
     position: relative;
     display: flex;
     align-items: center;
