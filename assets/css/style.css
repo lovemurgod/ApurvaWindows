@@ -207,6 +207,7 @@ body {
     position: relative;
     background: var(--primary-navy);
     overflow: hidden;
+    margin-top: 80px;
 }
 
 .hero-background {
